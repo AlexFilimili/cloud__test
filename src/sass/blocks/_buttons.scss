@@ -1,0 +1,24 @@
+button {
+    padding: 12px 16px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5558FA;
+    background: white;
+    border: 1.5px solid #5558FA;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 20px;
+    transition: all .3s;
+    &:hover {
+        color: white; 
+        background: #5558FA;   
+    }
+}
+.nav-btns {
+    margin-top: 64px;
+    display: flex;
+    justify-content: space-between;
+    
+}

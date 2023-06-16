@@ -1,0 +1,104 @@
+.third-screen {
+    display: none;
+    .window {
+        padding: 176px 110px 80px 110px;
+    }
+    &__form {
+        position: relative;
+        width: 300px;
+        &__add-btn {
+            position: relative;
+            margin-top: 8px;
+            width: 44px;
+            height: 44px;
+            border: 1.5px solid #5558FA;
+            border-radius: 4px;
+            transition: all .3s;
+            cursor: pointer;            
+            &:hover {
+                background:#5558FA;
+                &::before, &::after {
+                    background-color: #fff;
+                }
+            }
+            &::before {  
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;                
+                display: block;
+                width: 14px;
+                height: 2px;
+                background-color: #5558FA;
+                transform: translate(-50%, -50%);
+                line-height: 44px;
+                &:hover {
+                    background-color: #fff;
+                }
+            }
+            &::after {
+                content: '';
+                position: absolute;
+                left: 50%;
+                top: 50%;              
+                display: block;
+                width: 2px;
+                height: 14px;
+                background-color: #5558FA;
+                transform: translate(-50%, -50%);
+                line-height: 44px;
+                
+            }
+        }
+    }
+    &__advantages {
+        width: 300px;
+        height: 228px;
+        margin-bottom: 0;
+        input {
+            margin-top: 8px;
+            width: 100%;            
+        }
+    }
+    &__checkbox, &__radio {
+        margin-top: 24px;
+        width: 300px;
+        height: 80px; 
+        display: grid;
+        grid-template: repeat(4, 20px) / 20px 20px 70px;
+        p {
+            grid-column: 1 / 4;
+            font-size: 14px;
+            line-height: 20px;
+        }        
+        input {
+            width: 16px;
+            height: 16px;
+            grid-column: 1 / 2;
+            justify-self: center;
+            align-self: center;
+        }  
+        label {
+            margin-bottom: 0;
+            width: 100%;
+            grid-column: 2 / 3;  
+            text-align: center                   
+        } 
+    }
+    &__remove-btns {
+        position: absolute;
+        top: 40px;
+        right: -36px;
+        height: 124px;
+        width: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }  
+    &__remove-btn {
+        svg {
+            cursor: pointer;            
+        }
+ 
+    }
+}

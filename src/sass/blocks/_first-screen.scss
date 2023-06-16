@@ -1,19 +1,8 @@
-.first-screen {    
-    width: 100%;
-    height: 950px;
-    position: relative;
-    background: #F4F4F5;
-    &__window {
-        padding-top: 25px;
-        padding-left: 24px;
-        width: 900px;
-        height: 704px; 
-        position: absolute;
-        left: calc(50% - 900px/2);
-        top: 24px;
-        background: #FFFFFF;
-        border-radius: 12px 12px 0px 0px;
-    }
+.first-screen {
+    display: none;    
+    .window {
+        padding: 25px 24px 273px 24px;
+    }          
     &__user {
         display: flex;
         width: 332px;
@@ -69,5 +58,23 @@
         height: 1px;
         background-color:#00000014;
     }
-    
+    #button-start {
+        margin-top: 48px;      
+        width: 79px;
+        height: 44px;        
+    } 
+    &__form {
+        margin-top: 24px;
+        width: 400px;
+        height: 168px;  
+        display: flex;
+        flex-direction: column; 
+        justify-content: space-between; 
+        &__phone, &__email {
+            input {       
+                width: 100%;
+                background: rgba(0, 0, 0, 0.04);        
+            }
+        }
+    }   
 }

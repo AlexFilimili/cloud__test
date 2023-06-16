@@ -1,0 +1,44 @@
+.second-screen {    
+    display: none;
+    .window {
+        padding: 62px 110px 80px 110px;
+    }  
+    &__form {
+        width: 300px;
+        margin-top: 115px;
+        &-tip {
+            margin-top: 8px;
+            margin-bottom: 24px;
+            font-size: 12px;
+            color: rgba(0, 0, 0, 0.48);
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        input {
+            width: 100%;
+        }
+        &__sex {
+            position: relative;
+            svg {
+                position: absolute;
+                right: 12px;
+                top: 40px;
+            }
+        }
+        &__choice {
+            display: none;
+            height: 80px;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 4px;
+            &-item {
+                padding: 8px 12px;
+                height: 40px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+    }  
+
+}
