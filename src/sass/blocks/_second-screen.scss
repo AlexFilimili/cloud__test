@@ -1,11 +1,9 @@
-.second-screen {    
-    display: none;
-    .window {
-        padding: 62px 110px 80px 110px;
-    }  
+ .second-screen {       
+    display: block;
+    padding-right: 380px;           
     &__form {
         width: 300px;
-        margin-top: 115px;
+        margin-top: 67px;          
         &-tip {
             margin-top: 8px;
             margin-bottom: 24px;
@@ -16,6 +14,7 @@
             }
         }
         input {
+            padding: 12px;
             width: 100%;
         }
         &__sex {
@@ -27,7 +26,7 @@
             }
         }
         &__choice {
-            display: none;
+            display: block;
             height: 80px;
             background: #FFFFFF;
             box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);

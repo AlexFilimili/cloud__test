@@ -1,16 +1,15 @@
 .four-screen {
-    display: none;
-    .window {
-        padding: 176px 110px 80px 110px;
-        label {
-            font-size: 14px;
-            line-height: 20px;
-        }
-        textarea {
-            padding: 12px;
-            width: 680px;
-            height: 84px;
-        }
+    display: block;
+    margin-top: 66px;
+    margin-left: 1px;
+    label {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    textarea {
+        padding: 12px;
+        width: 680px;
+        height: 84px;
     }
     &__tip {
         font-size: 12px;

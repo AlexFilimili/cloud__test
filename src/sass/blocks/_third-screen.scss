@@ -1,11 +1,10 @@
 .third-screen {
-    display: none;
-    .window {
-        padding: 176px 110px 80px 110px;
-    }
+    display: block;
+    padding-right: 380px;
     &__form {
         position: relative;
-        width: 300px;
+        margin-top: 67px;
+        width: 300px;        
         &__add-btn {
             position: relative;
             margin-top: 8px;
@@ -56,6 +55,7 @@
         height: 228px;
         margin-bottom: 0;
         input {
+            padding: 12px;
             margin-top: 8px;
             width: 100%;            
         }

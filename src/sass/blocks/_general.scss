@@ -4,24 +4,32 @@
     position: relative;
     background: #F4F4F5;
 }
+.start-n-slider {        
+    display: flex;
+    width: 1800px;
+    transition: all .5s; 
+    transform: translateX(0);     
+    &__window {
+        position: absolute;
+        width: 900px;
+        top: 24px;
+        left: 50%;
+        transform: translateX(-50%);   
+        overflow: hidden;    
+    }
+}
 .window {    
     width: 900px;
     min-height: 500px; 
-    position: absolute;
-    left: calc(50% - 900px/2);
-    top: 24px;
     background: #FFFFFF;
     border-radius: 12px 12px 0px 0px;
 }
 .steps {
-    position: relative;
+    display: block;    
     height: 48px;
     width: 680px;
     &__wrapper {
-        position: absolute;
-        top: 90px;
-        left: 50%;
-        transform: translateX(-50%);
+        position: relative;
         z-index: 3;  
     }
     &__line-block {
@@ -87,6 +95,24 @@
         color: #666666;
     }
 }
+.window__small {
+    padding: 62px 110px 80px 110px;
+    width: 900px;
+    min-height: 500px; 
+    background: #FFFFFF;
+    border-radius: 12px 12px 0px 0px;
+} 
+.slide-window {
+    width: 680px;
+    min-height: 136px;  
+    overflow: hidden; 
+}
+.form-wrapper {
+    width: 2700px;
+    display: flex;    
+    transition: all .5s;
+    transform: translateX(0px);
+}
 .modal-success, .modal-error {    
     position: absolute;
     top: 50%;
@@ -111,12 +137,12 @@
     }
 }
 #modal-succ {
-    display: none;
+    display: none; // flex
     flex-direction: column;
     align-items: center;
 }
 #modal-err {
-    display: grid;
+    display: none; // grid
     .err {
         justify-self: center;
     }
@@ -128,7 +154,7 @@
 .blackout {
     position: fixed;
     top: 0;
-    display: block;
+    display: none;
     width: 100%;
     height: 100%;
     z-index: 6;
