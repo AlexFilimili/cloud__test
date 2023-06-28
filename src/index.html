@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cloud</title> <!-- измени имя сайта -->
-    <link rel="icon" href="/src/icons/Uber_favicon_2.png" type="image/png"> <!-- подключи иконку во вкладке браузера -->
+    <!-- <link rel="icon" href="/src/icons/Uber_favicon_2.png" type="image/png"> --> <!-- подключи иконку во вкладке браузера -->
     <link rel="stylesheet" href="css/style.min.css"> <!-- подключи свои стили css -->
   </head>
 
@@ -78,18 +78,24 @@
 
           <div class="window__small">
             <div class="steps__wrapper">
-              <div class="steps">        
+              <div class="steps">   
+                <div class="steps__progress-line"></div>     
                 <div class="steps__line"></div>
                 <div class="steps__circles">          
                   <div class="steps__circle-done">
-                    <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M4.66147 7.87365C4.56698 7.99874 4.41929 8.07227 4.26252 8.07227H3.68243C3.54729 8.07227 3.41791 8.01757 3.32376 7.92063L0.504131 5.01762C0.315687 4.8236 0.315686 4.51491 0.504131 4.32089L0.975725 3.83535C1.1721 3.63317 1.49669 3.63317 1.69306 3.83535L3.49489 5.69046C3.70845 5.91034 4.06776 5.88806 4.25251 5.64349L8.15121 0.482651C8.32099 0.2579 8.64283 0.217688 8.86269 0.393752L9.38636 0.813089C9.59761 0.982258 9.63592 1.28881 9.47278 1.50476L4.66147 7.87365Z" fill="white"/>
-                    </svg>            
-                  </div>        
-                  <div class="steps__circle steps__circle-active">
-                    <div class="steps__circle-small"></div>
-                  </div>                
-                  <div class="steps__circle"></div>        
+                    <img src="icons/Dot.svg" alt="success">           
+                  </div>
+                  <div class="steps__circle-done">
+                    <img src="icons/Dot.svg" alt="success">           
+                  </div>    
+                  <div class="steps__circle-done">
+                    <img src="icons/Dot.svg" alt="success">           
+                  </div>   
+                         
+                  <div class="steps__circle steps__circle-active"></div>                                                   
+                  <div class="steps__circle"></div>  
+                  <div class="steps__circle"></div> 
+                  <div class="steps__circle-move"></div>     
                 </div>       
                 <div class="steps-nums">
                   <div class="steps-num">1</div>
@@ -111,17 +117,19 @@
                     <label for="field-sername">Sername</label>
                     <input  id="field-sername" name="sername" placeholder="Placeholder" type="text">
                     <div class="second-screen__form-tip">Tip</div>
-                    <div id="field-sex" class="second-screen__form__sex">
+                    <div class="second-screen__form__sex">
                       <label for="field-sex">Sex</label>
-                      <input  id="field-sex" name="sex" placeholder="Не выбрано" type="text">
+                      <input  id="field-sex" readonly name="sex" placeholder="Не выбрано" type="text">
                       <div class="second-screen__form-tip">Tip</div>
-                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg class="svg-sex" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M4.35355 9.05848C4.15829 8.86321 4.15829 8.54663 4.35355 8.35137L5.05683 7.64809C5.25194 7.45298 5.56823 7.45281 5.76355 7.6477L9.64683 11.5225C9.84201 11.7173 10.158 11.7173 10.3532 11.5225L14.2364 7.6477C14.4318 7.45281 14.7481 7.45298 14.9432 7.64809L15.6464 8.35137C15.8417 8.54663 15.8417 8.86321 15.6464 9.05848L10.3536 14.3514C10.1583 14.5466 9.84171 14.5466 9.64645 14.3514L4.35355 9.05848Z" fill="black" fill-opacity="0.24"/>
                       </svg> 
-                      <div class="second-screen__form__choice">
-                        <div id="field-sex-option-man" class="second-screen__form__choice-item">man</div>
-                        <div id="field-sex-option-woman" class="second-screen__form__choice-item">woman</div>
-                      </div>            
+                      <div class="second-screen__form__choice-window">
+                        <div class="second-screen__form__choice">
+                          <div data-value="man" id="field-sex-option-man" class="second-screen__form__choice-item">man</div>
+                          <div data-value="woman" id="field-sex-option-woman" class="second-screen__form__choice-item">woman</div>
+                        </div>
+                      </div>                                 
                     </div>       
                   </div>
                 </div>         
@@ -131,11 +139,11 @@
                   <div class="third-screen__form">
       
                     <label class="third-screen__advantages">Advantages
-                      <input  id="field-advantages-1" name="advantages" placeholder="Placeholder" type="text">
-                      <input  id="field-advantages-2" name="advantages" placeholder="Placeholder" type="text">
-                      <input  id="field-advantages-3" name="advantages" placeholder="Placeholder" type="text">
-                      <div class="third-screen__form__add-btn"></div>
-                    </label>            
+                      <input class="advantages-input"  id="field-advantages-1" name="advantages" placeholder="Placeholder" type="text">
+                      <input class="advantages-input"  id="field-advantages-2" name="advantages" placeholder="Placeholder" type="text">
+                      <input class="advantages-input"  id="field-advantages-3" name="advantages" placeholder="Placeholder" type="text">                     
+                    </label> 
+                    <div class="third-screen__form__add-btn"></div>           
                     
                     <div class="third-screen__checkbox">
                       <p>Checkbox group</p>
@@ -159,23 +167,14 @@
                     
                     <div class="third-screen__remove-btns">
                       <div id="button-remove-1" class="third-screen__remove-btn">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="#5558fa" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M5.453 16.6522L4.55826 8.15225C4.52719 7.85703 4.75867 7.5999 5.05552 7.5999H14.9447C15.2416 7.5999 15.4731 7.85703 15.442 8.15225L14.5472 16.6522C14.5205 16.9067 14.3059 17.0999 14.05 17.0999H5.95025C5.69437 17.0999 5.47979 16.9067 5.453 16.6522Z" fill="#CCCCCC"/>
-                          <path d="M17.0001 5.6999H3.00012C2.72398 5.6999 2.50012 5.47605 2.50012 5.1999V4.2999C2.50012 4.02376 2.72398 3.7999 3.00012 3.7999H5.35511C5.44983 3.7999 5.54261 3.77299 5.62263 3.72231L8.37761 1.97749C8.45764 1.92681 8.55041 1.8999 8.64514 1.8999H11.3551C11.4498 1.8999 11.5426 1.92681 11.6226 1.97749L14.3776 3.72231C14.4576 3.77299 14.5504 3.7999 14.6451 3.7999H17.0001C17.2763 3.7999 17.5001 4.02376 17.5001 4.2999V5.1999C17.5001 5.47604 17.2763 5.6999 17.0001 5.6999Z" fill="#CCCCCC"/>
-                        </svg>          
+                        <img src="icons/remove.svg" alt="remove">         
                       </div>
                       <div id="button-remove-2" class="third-screen__remove-btn">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M5.453 16.6522L4.55826 8.15225C4.52719 7.85703 4.75867 7.5999 5.05552 7.5999H14.9447C15.2416 7.5999 15.4731 7.85703 15.442 8.15225L14.5472 16.6522C14.5205 16.9067 14.3059 17.0999 14.05 17.0999H5.95025C5.69437 17.0999 5.47979 16.9067 5.453 16.6522Z" fill="#CCCCCC"/>
-                          <path d="M17.0001 5.6999H3.00012C2.72398 5.6999 2.50012 5.47605 2.50012 5.1999V4.2999C2.50012 4.02376 2.72398 3.7999 3.00012 3.7999H5.35511C5.44983 3.7999 5.54261 3.77299 5.62263 3.72231L8.37761 1.97749C8.45764 1.92681 8.55041 1.8999 8.64514 1.8999H11.3551C11.4498 1.8999 11.5426 1.92681 11.6226 1.97749L14.3776 3.72231C14.4576 3.77299 14.5504 3.7999 14.6451 3.7999H17.0001C17.2763 3.7999 17.5001 4.02376 17.5001 4.2999V5.1999C17.5001 5.47604 17.2763 5.6999 17.0001 5.6999Z" fill="#CCCCCC"/>
-                        </svg>          
+                        <img src="icons/remove.svg" alt="remove">         
                       </div>
                       <div id="button-remove-3" class="third-screen__remove-btn">
-                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M5.453 16.6522L4.55826 8.15225C4.52719 7.85703 4.75867 7.5999 5.05552 7.5999H14.9447C15.2416 7.5999 15.4731 7.85703 15.442 8.15225L14.5472 16.6522C14.5205 16.9067 14.3059 17.0999 14.05 17.0999H5.95025C5.69437 17.0999 5.47979 16.9067 5.453 16.6522Z" fill="#CCCCCC"/>
-                          <path d="M17.0001 5.6999H3.00012C2.72398 5.6999 2.50012 5.47605 2.50012 5.1999V4.2999C2.50012 4.02376 2.72398 3.7999 3.00012 3.7999H5.35511C5.44983 3.7999 5.54261 3.77299 5.62263 3.72231L8.37761 1.97749C8.45764 1.92681 8.55041 1.8999 8.64514 1.8999H11.3551C11.4498 1.8999 11.5426 1.92681 11.6226 1.97749L14.3776 3.72231C14.4576 3.77299 14.5504 3.7999 14.6451 3.7999H17.0001C17.2763 3.7999 17.5001 4.02376 17.5001 4.2999V5.1999C17.5001 5.47604 17.2763 5.6999 17.0001 5.6999Z" fill="#CCCCCC"/>
-                        </svg>          
-                      </div>
+                        <img src="icons/remove.svg" alt="remove">           
+                      </div>                                            
                     </div>        
                   </div>
                 </div>
@@ -191,6 +190,7 @@
             <div class="nav-btns">
               <button id="button-back">Назад</button>
               <button id="button-next">Далее</button>
+              <button id="button-send">Отправить</button>
             </div>              
 
           </div> 
@@ -199,22 +199,17 @@
       </div>
     </div>
     
-\\
+
     <div id="modal-succ" class="modal-success">
       <p>Форма успешно отправлена</p>
-      <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="80" height="80" rx="40" fill="#05AE71" fill-opacity="0.15"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M20.8 40C20.8 29.4016 29.4016 20.8 40 20.8C50.5985 20.8 59.2001 29.4016 59.2001 40C59.2001 50.5985 50.5985 59.2001 40 59.2001C29.4016 59.2001 20.8 50.5985 20.8 40ZM47.4093 32.9903C46.9678 32.6817 46.3556 32.7557 46.0058 33.16L37.8957 42.5311L33.715 38.7738C33.3165 38.4157 32.7008 38.4157 32.3023 38.7738L30.7329 40.1842C30.2891 40.5831 30.2891 41.264 30.7329 41.6629L36.5953 46.9314C36.7874 47.1041 37.0396 47.2001 37.3016 47.2001H38.9073C39.2144 47.2001 39.5058 47.0683 39.7033 46.8401L49.3568 35.6856C49.7452 35.2368 49.6585 34.5625 49.1684 34.2199L47.4093 32.9903Z" fill="#05AE71"/>
-      </svg>
-      <button id="button-to-main">На главную</button>      
+      <img src="icons/IconDecorPredefined.svg" alt="success">
+      <button id="button-to-main">На главную
+      </button>      
     </div>
   
     <div id="modal-err" class="modal-error">
       <p>Ошибка</p>
-      <svg class="err" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="80" height="80" rx="40" fill="#E84E58" fill-opacity="0.15"/>
-        <path fill-rule="evenodd" clip-rule="evenodd" d="M39.9998 20.7998C29.4014 20.7998 20.7998 29.4014 20.7998 39.9998C20.7998 50.5982 29.4014 59.1998 39.9998 59.1998C50.5982 59.1998 59.1998 50.5982 59.1998 39.9998C59.1998 29.4014 50.5982 20.7998 39.9998 20.7998ZM32.4095 31.4835C32.7319 31.161 33.2548 31.161 33.5772 31.4835L40 37.9062L46.4225 31.4838C46.745 31.1613 47.2678 31.1613 47.5903 31.4838L48.758 32.6515C49.0805 32.974 49.0805 33.4968 48.758 33.8192L42.3355 40.2417L48.7579 46.6641C49.0804 46.9865 49.0804 47.5094 48.7579 47.8318L47.5902 48.9996C47.2677 49.322 46.7449 49.322 46.4224 48.9996L40 42.5772L33.5773 48.9998C33.2549 49.3223 32.7321 49.3223 32.4096 48.9998L31.2419 47.8321C30.9194 47.5096 30.9194 46.9868 31.2419 46.6643L37.6645 40.2417L31.2417 33.819C30.9193 33.4965 30.9193 32.9737 31.2417 32.6512L32.4095 31.4835Z" fill="#E84E58"/>
-      </svg>      
+      <img src="icons/IconDecorPredefinedErr.svg" alt="Error">     
       <button id="button-close">Закрыть</button>   
     </div>
 

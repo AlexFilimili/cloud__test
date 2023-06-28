@@ -23,21 +23,59 @@
                 position: absolute;
                 right: 12px;
                 top: 40px;
+                cursor: pointer;
+                transition: all .4s;               
             }
         }
-        &__choice {
-            display: block;
+        &__choice {            
+            width: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
             height: 80px;
             background: #FFFFFF;
-            box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+            box-shadow: none;
             border-radius: 4px;
+            transition: all .4s;
+            transform: translate(20px, -80px);
             &-item {
                 padding: 8px 12px;
                 height: 40px;
                 font-size: 14px;
                 line-height: 20px;
+                cursor: pointer;
+                &:hover {
+                    background: #F4F4F5;
+                }
+            }
+            &-window {
+                position: absolute;
+                top: 72px;
+                width: 340px;
+                height: 100px;
+                overflow: hidden;
+                transform: translateX(-20px);
             }
         }
     }  
-
 }
+#field-sex {
+    cursor: pointer;
+}
+.rotate-180 {
+    transform: rotate(180deg);
+}
+.plusPadding-15px {
+    padding-left: 20px;
+}
+.minusPadding-15px {
+    padding: 62px 110px 101px 90px;
+}
+.changeSexList {
+    transform: translate(20px, 0px);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.08);
+}
+.left24px {
+    left: 24px;
+}
+
