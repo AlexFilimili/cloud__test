@@ -211,4 +211,12 @@
     visibility: visible;
     opacity: 1;
 }
+.errorPlaceholder::placeholder {
+    color: #ff0000c7;
+}
+.errorBorder {
+    border: 1px solid #ff0000c7;
+}
+
+
 
